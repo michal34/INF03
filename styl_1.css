@@ -1,0 +1,65 @@
+body {
+  background: #f6e5dc;
+  font-family: Verdana;
+}
+
+.baner {
+  text-align: center;
+  height: 60px;
+  background: #2f180c;
+  color: khaki;
+}
+
+.baner h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.baners_container {
+  display: flex;
+  width: 100%;
+}
+
+.panel_lewy {
+  width: 60%;
+  background: #f6e5dc;
+}
+
+.img {
+  height: 350px;
+  width: 600px;
+}
+
+.panel_prawy {
+  background: #f6e5dc;
+  font-size: 150%;
+  width: 40%;
+  padding: 70px;
+}
+
+.panel_dolny {
+  background: #d0b6a8;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.checkbox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.button_container button {
+  background: #2f180c;
+  color: khaki;
+  padding: 5px;
+  margin: 10px;
+}
+
+.stopka {
+  background: #2f180c;
+  height: 60px;
+  width: 100%;
+  color: khaki;
+}
