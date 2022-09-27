@@ -50,7 +50,7 @@ body {
   justify-content: center;
 }
 
-.button_container button {
+.button_container .button {
   background: #2f180c;
   color: khaki;
   padding: 5px;

@@ -27,24 +27,23 @@
         </div>
       </div>
     </div>
-    <div class="panel_dolny">
+    <form class="panel_dolny" action="rezerwacja.php">
       <h3>Zarezerwuj stolik on-line</h3>
       <p>Data (format rrrr-mm-dd):</p>
-      <input />
+      <input name="data" id="data" />
       <p>Ile osób?:</p>
-      <input />
+      <input name="ilosc_osob" id="ilosc_osob" />
       <p>Twój numer telefonu:</p>
-      <input />
+      <input name="numer_telefonu" id="numer_telefonu" />
       <div class="checkbox">
         <input type="checkbox" />
         <p>Zgadzam się na przetwarzanie moich danych osobowych</p>
       </div>
       <div class="button_container">
-        <button>WYCZYŚĆ</button>
-        <button>REZERWUJ</button>
+        <input type="reset" class="button" />
+        <input type="submit" class="button" />
       </div>
-    </div>
+    </form>
     <div class="stopka">Stronę internetową opracował: 0000000000000000</div>
   </body>
-  
 </html>
