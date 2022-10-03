@@ -20,9 +20,28 @@
         <div>
           <h3><strong>U nas dobrze zjesz!</strong></h3>
           <ol>
-            <li>Obiady od 40 zł</li>
-            <li>Przekąski od 10 zł</li>
-            <li>Kolacje od 20 zł</li>
+            <?php
+              $link = new mysqli("127.0.0.1", "root", "", "baza");
+ 
+              if($link === false){
+                  die("ERROR: Could not connect. " . mysqli_connect_error());
+              }
+
+              $sql = "SELECT * FROM dania";
+              if($result = mysqli_query($link, $sql)){
+                  if(mysqli_num_rows($result) > 0){
+                      while($row = mysqli_fetch_array($result)){
+                              echo "<li>" . $row['nazwa'] . " od " . $row['cena'] . " zł</li>";
+                      }
+                      mysqli_free_result($result);
+                  } else{
+                      echo "No records matching your query were found.";
+                  }
+              } else{
+                  echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+              }
+              mysqli_close($link);
+            ?>
           </ol>
         </div>
       </div>
@@ -44,6 +63,6 @@
         <input type="submit" class="button" />
       </div>
     </form>
-    <div class="stopka">Stronę internetową opracował: 0000000000000000</div>
+    <div class="stopka">Stronę internetową opracował: <i>0000000000000000</i></div>
   </body>
 </html>
