@@ -1,0 +1,54 @@
+body {
+  font-family: Helvetica;
+  margin: 0;
+}
+
+.blok_banera,
+.blok_stopki {
+  background: #00838f;
+  color: white;
+  padding: 5px;
+  font-size: 130%;
+  text-align: center;
+}
+
+.blok_lewy_gorny {
+  height: 150px;
+}
+
+.blok_lewy_dolny {
+  height: 300px;
+}
+
+.blok_prawy {
+  background: #4fb3bf;
+  width: 45%;
+  height: 450px;
+  text-align: center;
+}
+
+.img {
+  margin: 20px;
+  box-shadow: 10px 10px 7px DimGray;
+}
+
+.table {
+  margin: auto;
+  width: 80%;
+}
+
+.tr,
+.td {
+  padding: 4px;
+}
+
+.table,
+.tr,
+.td {
+  border: 1px solid #4fb3bf;
+  border-collapse: collapse;
+}
+
+.td:hover {
+  background: #4fb3bf;
+}

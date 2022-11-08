@@ -1,0 +1,115 @@
+CREATE TABLE Desk(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Number INT NOT NULL,
+	busy VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Address(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	City VARCHAR(50) NOT NULL,
+	Street VARCHAR(50) NOT NULL,
+	Postal_code VARCHAR(6) NOT NULL,
+	Building_number VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE Restaurant(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Address INT NOT NULL,
+	FOREIGN KEY (Address) REFERENCES Address(id),
+	Phone_number VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Reservation(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Restaurant_id INT NOT NULL,
+	FOREIGN KEY (Restaurant_id) REFERENCES Restaurant(id),
+	Date DATE NOT NULL,
+	Number_of_people INT NOT NULL,
+	Table_id INT NOT NULL,
+	FOREIGN KEY (Table_id) REFERENCES Desk(id)
+);
+
+CREATE TABLE Meal_type(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Type VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE Meal(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Name VARCHAR(50) UNIQUE NOT NULL,
+	Price MONEY NOT NULL,
+	Meal_type INT NOT NULL,
+	FOREIGN KEY (Meal_type) REFERENCES Meal_type(id)
+);
+
+CREATE TABLE Role(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Name VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE Employee(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	First_name VARCHAR(50) NOT NULL,
+	Second_name VARCHAR(50) NOT NULL,
+	Pesel VARCHAR(11) NOT NULL,
+	Phone_number VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE Employee_role(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Role_id INT NOT NULL,
+	FOREIGN KEY (Role_id) REFERENCES Role(id),
+	Employee_id INT NOT NULL,
+	FOREIGN KEY (Employee_id) REFERENCES Employee(id)
+);
+
+CREATE TABLE Restaurant_employee(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Restaurant_id INT NOT NULL,
+	FOREIGN KEY (Restaurant_id) REFERENCES Restaurant(id),
+	Employee_id INT NOT NULL,
+	FOREIGN KEY (Employee_id) REFERENCES Employee(id)
+);
+
+CREATE TABLE Restaurant_meal(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Meal_id INT NOT NULL,
+	FOREIGN KEY (Meal_id) REFERENCES Meal(id),
+	Restaurant_id INT NOT NULL,
+	FOREIGN KEY (Restaurant_id) REFERENCES Restaurant(id)
+);
+
+CREATE TABLE Account(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	first_name VARCHAR(50) NOT NULL,
+	second_name VARCHAR(50) NOT NULL,
+	phone_number VARCHAR(15) NOT NULL,
+	email VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE Account_bill(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Restaurant_id INT NOT NULL,
+	FOREIGN KEY (Restaurant_id) REFERENCES Restaurant(id),
+	Account_id INT NOT NULL,
+	FOREIGN KEY (Account_id) REFERENCES Account(id),
+	total_price MONEY NOT NULL
+);
+
+CREATE TABLE User_order(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	meal_id INT NOT NULL,
+	FOREIGN KEY (meal_id) REFERENCES meal(id),
+	Account_bill_id INT NOT NULL,
+	FOREIGN KEY (Account_bill_id) REFERENCES Account_bill(id)
+);
+
+CREATE TABLE Dynamic_pricing(
+	Id SERIAL PRIMARY KEY NOT NULL,
+	Account_id INT NOT NULL,
+	FOREIGN KEY (Account_id) REFERENCES Account(id),
+	meal_id INT NOT NULL,
+	FOREIGN KEY (meal_id) REFERENCES Meal(id),
+	Discount FLOAT
+);
