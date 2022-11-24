@@ -9,8 +9,8 @@
     <header class="blok_banera">
         <h1>Portal dla wędkarzy</h1>
     </header>
-    <div style="display: flex">
-        <div style="width: 55%; background:#efefef ">
+    <div class="blok_srodkowy">
+        <div class="blok_lewy">
             <div class="blok_lewy_gorny">
                 <h3>Ryby zamieszkujące rzeki</h3>
                 <ol>
@@ -28,7 +28,7 @@
                         if($result = mysqli_query($link, $query)) {
                             if(mysqli_num_rows($result) > 0){
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<li>" . $row['nazwa'] . " pływa w " . $row['akwen'] . ", " . $row['wojewodztwo'];
+                                    echo "<li>" . $row['nazwa'] . " pływa w rzece " . $row['akwen'] . ", " . $row['wojewodztwo'];
                                 }
                             }
                         }
@@ -41,9 +41,9 @@
                 <h3>Ryby drapieżne naszych wód</h3>
                 <table class="table">
                     <tr class="tr">
-                        <td class="td">L.p.</td>
-                        <td class="td">Gatunek</td>
-                        <td class="td">Występowanie</td>
+                        <th class="th">L.p.</th>
+                        <th class="th">Gatunek</th>
+                        <th class="th">Występowanie</th>
                     </tr>
                     <?php 
                         $link = mysqli_connect("localhost", "root", "", "wedkowanie");
@@ -57,7 +57,7 @@
                         if($result = mysqli_query($link, $query)) {
                             if(mysqli_num_rows($result) > 0){
                                 while($row = mysqli_fetch_array($result)){
-                                    echo "<tr class='tr'><td class='td'>" . $row['id'] . "</td><td class='td'>" . $row['nazwa'] . "</td><td class='td'>" . $row['wystepowanie'] . "</td></tr>"; 
+                                    echo "<tr class='tr'><td>" . $row['id'] . "</td><td>" . $row['nazwa'] . "</td><td>" . $row['wystepowanie'] . "</td></tr>"; 
                                 }
                             }
                         }
@@ -66,13 +66,15 @@
                 </table>
             </div>
         </div>
-        <footer class="blok_prawy">
-            <image class="img" height="400px" src="./ryba1.jpg" alt="sum" />
-            <a style="display: block" href="./kwerendy.txt">Pobierz kwerendy</a>
-        </footer>
+        <div class="blok_prawy">
+                <div>
+                    <image class="img" src="./ryba1.jpg" alt="sum" />
+                    <a class="link" href="./kwerendy.txt">Pobierz kwerendy</a>
+                </div>
+            </div>
     </div>
-    <div class="blok_stopki">
-        <p>Strone wykonał: 00000000000</p>
-    </div>
+    <footer class="blok_stopki">
+        <p>Stronę wykonał: 00000000000</p>
+    </footer>
 </body>
 </html>

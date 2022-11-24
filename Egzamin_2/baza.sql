@@ -35,4 +35,4 @@ INSERT INTO okres_ochronny (do_miesiaca, od_miesiaca, Ryby_id, wymiar_ochronny) 
 
 INSERT INTO ryby (dobowy_limit, nazwa,styl_zycia, wystepowanie)  VALUES (12, 'sum', 1, 'rzeki');
 
-INSERT INTO lowisko(akwen, rodzaj, Ryby_id, wojewodztwo) VALUE ('rzece', 3, 1, 'mazowieckie');
+INSERT INTO lowisko(akwen, rodzaj, Ryby_id, wojewodztwo) VALUE ('bałtyk', 3, 1, 'mazowieckie');

@@ -12,12 +12,22 @@ body {
   text-align: center;
 }
 
+.blok_lewy {
+  width: 55%;
+  background: #efefef;
+}
+
 .blok_lewy_gorny {
   height: 150px;
 }
 
 .blok_lewy_dolny {
   height: 300px;
+}
+
+.blok_srodkowy {
+  display: flex;
+  height: 450px;
 }
 
 .blok_prawy {
@@ -29,6 +39,7 @@ body {
 
 .img {
   margin: 20px;
+  width: 400px;
   box-shadow: 10px 10px 7px DimGray;
 }
 
@@ -37,18 +48,26 @@ body {
   width: 80%;
 }
 
+.table,
 .tr,
-.td {
+td {
+  border: 1px solid #4fb3bf;
+  border-collapse: collapse;
   padding: 4px;
 }
 
-.table,
-.tr,
-.td {
+.th {
+  font-weight: 700;
   border: 1px solid #4fb3bf;
   border-collapse: collapse;
+  text-align: center;
+  padding: 4px;
 }
 
-.td:hover {
+td:hover {
   background: #4fb3bf;
+}
+
+.link {
+  display: block;
 }
