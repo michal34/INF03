@@ -64,7 +64,7 @@ td {
   padding: 4px;
 }
 
-td:hover {
+tr:hover {
   background: #4fb3bf;
 }
 

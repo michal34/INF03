@@ -31,9 +31,7 @@
                                     echo "<li>" . $row['nazwa'] . " pływa w rzece " . $row['akwen'] . ", " . $row['wojewodztwo'];
                                 }
                             }
-                        }
-
-                        mysqli_close($link);
+                        }          
                     ?>
                 </ol>
             </div>
@@ -46,12 +44,6 @@
                         <th class="th">Występowanie</th>
                     </tr>
                     <?php 
-                        $link = mysqli_connect("localhost", "root", "", "wedkowanie");
-
-                        if($link === false) {
-                            die("Error". mysqli_connect_error());
-                        }
-
                         $query = " SELECT id, nazwa, wystepowanie FROM `Ryby` WHERE `styl_zycia` = 1";
 
                         if($result = mysqli_query($link, $query)) {

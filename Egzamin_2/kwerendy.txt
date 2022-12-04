@@ -11,4 +11,4 @@ kw3:
 
 kw4:
     ALTER TABLE ryby
-    ADD COLUMN dobowy_limit TINYINT NOT NULL
+    ADD COLUMN dobowy_limit TINYINT UNSIGNED NOT NULL
