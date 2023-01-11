@@ -1,0 +1,14 @@
+DROP DATABASE IF EXISTS crud;
+
+CREATE DATABASE crud;
+
+USE crud;
+
+CREATE TABLE sportman (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    surname VARCHAR(30) NOT NULL,
+    age INT NOT NULL,
+    sport VARCHAR(30) NOT NULL,
+    medals_won INT NOT NULL
+);
