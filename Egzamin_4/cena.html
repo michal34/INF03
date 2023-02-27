@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./styl.css" />
+        <title>malarz</title>
+    </head>
+    <body>
+        <div class="baner">
+            <h1><a href="./index.html">Koszty farby</a></h1>
+        </div>
+        <div class="content_container">
+            <div class="left_container">
+                <h3>Mieszamy czy wyceniamy?</h3>
+                <a href="./mieszamy.html">Mieszamy</a>
+                <a href="./cena.html">Wyceniamy</a>
+            </div>
+            <div class="right_container">
+                <h3>Obliczanie na podstawie powierzchni zapotrzebowania na farbę</h3>
+                <div>Podaj powierzchnię <input id="powierzchnia" type="number" /></div>
+                <button class="button" onclick="wylicz()">Policz</button>
+                <p id="result"></p>
+            </div>
+        </div>
+        <script>
+            const wylicz = () => {
+                const powierzchnia = document.getElementById("powierzchnia").value;
+                const iloscPuszek = Math.round(powierzchnia / 4);
+                document.getElementById(
+                    "result"
+                ).innerHTML = `Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: ${iloscPuszek}`;
+            };
+        </script>
+        <div class="footer">Malarz<br />Stronę opracował: 00000000000</div>
+    </body>
+</html>
