@@ -33,8 +33,8 @@
             </div>
             <div class="baner_prawy">   
                 <h2>Cena wybranego artykułu w promocji</h2>
-                <form method="POST">
-                    <select>
+                <form method="POST" >
+                    <select name="id">
                         <?php 
                             $query = 'SELECT * FROM towary';
                             if($result = mysqli_query($db, $query)) {
@@ -44,19 +44,17 @@
                                     }
                                 }
                             }
-            
                             mysqli_close($db);
-                            ?>
+                        ?>
                     </select>
-                    <input type="submit" value="WYBIERZ" />  
+                    <input type="submit" value="WYBIERZ" >  
                 </form>
-                <?php
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $cena = $_POST['cena'];
-                        echo("<p>" . round($cena * 0.9, 2) . "</p>");
-                    }
-                
-                ?>
+            <?php
+                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id']) ) {
+                    $cena = $_POST['id'];
+                    echo("<p>" . round($cena * 0.9, 2) . "</p>");
+                }
+            ?>
             </div>
         </div>
         <div class="stopka">
