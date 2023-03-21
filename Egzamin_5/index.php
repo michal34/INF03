@@ -17,7 +17,7 @@
             <div class="baner_srodkowy">
                 <h2>Promocja 10% obejmuje artykuły:</h2>
                 <ul>
-                    <?php 
+					<?php 
                         $db = mysqli_connect("localhost", "root", "", "sklep");
 
                         $query = 'SELECT nazwa FROM towary WHERE promocja > 0';
@@ -50,7 +50,7 @@
                     <input type="submit" value="WYBIERZ" >  
                 </form>
             <?php
-                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id']) ) {
+                if (isset($_POST['id']) ) {
                     $cena = $_POST['id'];
                     echo("<p>" . round($cena * 0.9, 2) . "</p>");
                 }

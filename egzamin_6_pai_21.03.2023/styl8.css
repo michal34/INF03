@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Georgia;
+}
+
+.header {
+    display: flex;
+}
+
+.blok_menu,
+.blok_logo {
+    background: #63ac74;
+    color: orange;
+    height: 140px;
+    width: 50%;
+    text-align: right;
+    font-size: 160%;
+    margin: 0;
+    display: flex;
+    justify-content: right;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.blok_glowny {
+    background: #e3f6e7;
+    height: 500px;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer_1,
+.footer_2,
+.footer_3,
+.footer_4 {
+    background: #63ac74;
+    height: 150px;
+    width: 25%;
+}
+
+.footer_1 img {
+    height: 150px;
+}
+
+a {
+    color: orange;
+    margin: 15px;
+}
+
+table {
+    width: 100%;
+    border: 2px solid green;
+}
+
+th {
+    background: #63ac74;
+    color: white;
+}
+
+.cena {
+    text-align: right;
+}
+
+.th_numer {
+    width: 46px;
+}
+
+.th_opis {
+    width: 1440px;
+}
+
+.th_cena {
+    width: 40px;
+}

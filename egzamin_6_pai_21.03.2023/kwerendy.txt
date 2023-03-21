@@ -1,0 +1,16 @@
+KW1:
+    SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena < 1000;
+
+KW2:
+    SELECT po.nazwa, po.opis FROM podzespoly AS po
+    JOIN producenci AS pr ON pr.id = po.producenci_id
+    WHERE dostepnosc = true AND pr.nazwa = 'Intel';
+
+KW3:
+    SELECT po.nazwa, pr.nazwa FROM podzespoly AS po
+    JOIN producenci AS pr ON pr.id = po.producenci_id;
+
+KW4:
+    UPDATE producenci
+    SET nazwa = 'PATRIOT'
+    WHERE nazwa = 'Patriot';
