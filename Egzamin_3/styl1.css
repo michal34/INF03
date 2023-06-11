@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+.baner {
+    background: #40271a;
+    color: white;
+    text-align: center;
+}
+
+.baner h1 {
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.container {
+    display: flex;
+}
+
+.container .panel_lewy {
+    background: #dbb29c;
+    width: 40%;
+    height: 700px;
+}
+
+.container .panel_lewy img {
+    padding: 30px;
+}
+
+.container .panel_lewy table,
+td {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: brown;
+    width: 500px;
+    margin: 10px;
+    text-align: center;
+}
+
+.container .panel_prawy {
+    background: #ffe3d4;
+    width: 60%;
+    height: 700px;
+}
+
+.stopka {
+    background: #40271a;
+    color: white;
+    text-align: right;
+}
+
+.stopka p {
+    margin: 0;
+}
