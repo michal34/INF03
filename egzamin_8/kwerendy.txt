@@ -1,0 +1,14 @@
+zapytanie 1:
+SELECT id, dataWyjazdu, cel, cena FROM wycieczki WHERE dostepna = '1'
+
+zapytanie 2:
+SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis DESC
+
+zapytanie 3:
+SELECT w.cel, w.cena, z.podpis FROM wycieczki AS w
+JOIN zdjecia AS z ON z.id = w.zdjecia_id
+WHERE w.cena > 1200
+
+zapytanie 4:
+ALTER TABLE wycieczki
+ADD COLUMN liczbaDni INTEGER UNSIGNED
