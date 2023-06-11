@@ -1,0 +1,57 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+}
+
+.header_1 a {
+    position: relative;
+}
+
+.header_1 a p {
+    position: absolute;
+    left: 0;
+    margin: 0;
+}
+
+.header_1,
+.header_2 {
+    background: rgb(146, 184, 112);
+    text-align: center;
+    width: 50%;
+    height: 170px;
+}
+
+.baner,
+.stopka {
+    background: rgb(100, 61, 49);
+    color: white;
+    text-align: center;
+    height: 80px;
+    padding: 5px;
+}
+
+.blok_lewy,
+.blok_prawy {
+    background: rgb(146, 181, 112);
+    width: 50%;
+    height: 450px;
+}
+
+.content {
+    display: flex;
+}
+h1 {
+    letter-spacing: 20px;
+    font-size: 250%;
+}
+
+table,
+td {
+    border: 2px green dashed;
+    padding: 20px;
+    margin: 30px;
+}

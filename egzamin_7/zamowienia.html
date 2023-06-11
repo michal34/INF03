@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fabryka cukierków</title>
+        <link rel="stylesheet" href="./styl10.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="header_1">
+                <a href="./zamowienia.html"
+                    ><p>Zamów cukierki</p>
+                    <img src="cukierek.jpg" height="170px"
+                /></a>
+            </div>
+
+            <div class="header_2">
+                <a href="./index.html"><img src="./Bez nazwy-1.png" height="170px" alt="Nasze logo" /></a>
+            </div>
+        </div>
+
+        <div class="baner">
+            <h1>Strefa zamówień</h1>
+        </div>
+
+        <div class="content">
+            <div class="blok_lewy">
+                <p>Numer kształtu</p>
+
+                <input type="number" id="kształt" />
+
+                <p>skomponuj swój kolor, podaj RGB</p>
+
+                R: <input type="number" id="r" /> G: <input type="number" id="g" /> B: <input type="number" id="b" />
+
+                <button id="zamow">Zamówienie</button>
+
+                <p id="zamowienie">Twoje zamówienie</p>
+
+                <button id="kolor">Kolor</button>
+            </div>
+
+            <script>
+                const button = document.getElementById("zamow");
+                const zamowienie = document.getElementById("zamowienie");
+                const kształt = document.getElementById("kształt");
+                const r = document.getElementById("r");
+                const g = document.getElementById("g");
+                const b = document.getElementById("b");
+                const kolor = document.getElementById("kolor");
+
+                button.addEventListener("click", function () {
+                    console.log(kształt.value);
+                    console.log("dzioala");
+                    let text = "";
+                    if (kształt.value == 1) text = "to cukierek cytryna";
+                    else if (kształt.value == 2) text = "to cukierek liśc";
+                    else if (kształt.value == 3) text = "to cukierek banan";
+                    else if (kształt.value) text = "to cukierek inny";
+
+                    zamowienie.innerHTML = "Twoje zamówienie" + text;
+                });
+
+                kolor.addEventListener("click", function () {
+                    kolor.style.backgroundColor = "rgb(" + r.value + "," + g.value + "," + b.value + ")";
+                });
+            </script>
+
+            <div class="blok_prawy">
+                <h2>Nasz oferta</h2>
+                <table>
+                    <tr>
+                        <td>Kształty</td>
+                        <td rowspan="2">Możesz zamówić<br />dowolny kolor cuierka</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ol>
+                                <li>cytryna</li>
+                                <li>liść</li>
+                                <li>banan</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="stopka">Autor strony: <b>PESEL</b></div>
+    </body>
+</html>
