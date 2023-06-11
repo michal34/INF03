@@ -1,0 +1,61 @@
+body {
+	font-family: Verdana;
+	margin: 0;
+}
+
+input, button {
+	margin-bottom: 20px;
+}
+
+img {
+	height: 250px;
+	box-shadow: 15px 15px 10px DimGray;
+}
+
+a {
+	text-decoration: none;
+	background: MintCream;
+	color: SeaGreen;
+	padding: 15px;
+	line-height: 70px;
+}
+
+.header {
+	display: flex;
+}
+
+.header .header-left, .header-right {
+	background: SeaGreen;
+	color: white;
+	line-height: 150px;
+	height: 260px;
+	font-size: 160%;
+}
+
+.header .header-left {
+	width: 75%;
+}
+
+.header .header-right {
+	width: 25%;
+	text-align: right;
+	display: flex;
+}
+
+.content {
+	background: MintCream;
+	padding: 80px;
+}
+
+.footer {
+	display: flex;
+}
+
+.footer .footer-left, .footer-right {
+	background: SeaGreen;
+	color: white;
+	width: 50%;
+	height: 70px;
+	text-align: center;
+}
+

@@ -1,0 +1,17 @@
+kwerenda_1:
+INSERT INTO Zawody_wedkarskie (Kartt_wedkarskie_id, Lowisko_id, data_zawodow, sedzia) VALUES
+(2, 4, "2021-09-28", "Andrzej Nowak")
+
+kwerenda_2:
+SELECT id, data_zawodow FROM Zawody_wedkarskie
+WHERE sedzia = "Krzysztof Dobrowolski"
+
+kwerenda_3:
+SELECT imie, nazwisko punkty FROM karty_wedkarskie
+JOIN Zawody_wedkarskie ON Zawody_wedkarskie.Kartt_wedkarskie_id = Karty_wedkarskie.id
+WHERE Zawody_wedkarskie.id = 4;
+
+kwerenda_4:
+UPDATE Karty_wedkarskie
+SET punkty = punkty + 2
+WHERE id = 1;
